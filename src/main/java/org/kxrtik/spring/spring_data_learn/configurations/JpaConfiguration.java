@@ -1,5 +1,6 @@
-package org.kxrtik.spring.spring_data_learn;
+package org.kxrtik.spring.spring_data_learn.configurations;
 
+import org.kxrtik.spring.spring_data_learn.annotations.Dev;
 import org.kxrtik.spring.spring_data_learn.models.Category;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,6 +11,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
 
+@Dev
 @Configuration
 public class JpaConfiguration {
 

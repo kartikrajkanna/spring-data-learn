@@ -1,7 +1,6 @@
 package org.kxrtik.spring.spring_data_learn.services;
 
 import org.kxrtik.spring.spring_data_learn.models.Category;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,15 +11,13 @@ import java.math.BigInteger;
 
 @Service
 @Transactional
-public class JpaCustomerService {
+public class JpaCategoryService {
 
-    private static final String CUSTOMER_CACHE = "customers";
     private static BigInteger nextId = BigInteger.ZERO;
 
     @PersistenceContext
     private EntityManager entityManager;
 
-    @Cacheable(CUSTOMER_CACHE)
     @Transactional(readOnly=true)
     public Category getCustomerById(BigInteger id) {
         return entityManager.find(Category.class, id);
