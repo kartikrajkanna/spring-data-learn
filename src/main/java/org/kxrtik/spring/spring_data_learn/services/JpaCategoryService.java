@@ -1,6 +1,7 @@
 package org.kxrtik.spring.spring_data_learn.services;
 
 import org.kxrtik.spring.spring_data_learn.models.Category;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -31,8 +32,12 @@ public class JpaCategoryService {
         newCustomer.setName(name);
         newCustomer.setTag(tag);
 
-        this.entityManager.persist(newCustomer);
+        entityManager.persist(newCustomer);
         return newCustomer;
+    }
+
+    void setEntityManager(EntityManager entityManager) {
+        this.entityManager = entityManager;
     }
 
     private static void updateId() {

@@ -3,13 +3,13 @@ package org.kxrtik.spring.spring_data_learn.configurations;
 import org.kxrtik.spring.spring_data_learn.annotations.Dev;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
 
-@Dev
 @Configuration
-public class DataSourceConfiguration {
+public class DataSourceConfig implements DataConfig {
 
     @Bean
     public DataSource dataSource() {

@@ -7,7 +7,7 @@ import java.math.BigInteger;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CategoryTest {
+class CategoryTesting {
 
     private static Category category;
 
