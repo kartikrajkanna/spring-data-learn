@@ -6,3 +6,13 @@ lib/
 springdatalearn\.iml
 
 *.class
+
+\.classpath
+
+\.project
+
+\.settings/
+
+target/surefire-reports/
+/bin/
+/target/

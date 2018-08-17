@@ -1,7 +1,5 @@
 package org.kxrtik.spring.spring_data_learn.configurations;
 
-import org.kxrtik.spring.spring_data_learn.annotations.Dev;
-import org.kxrtik.spring.spring_data_learn.annotations.Testing;
 import org.kxrtik.spring.spring_data_learn.models.Category;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
