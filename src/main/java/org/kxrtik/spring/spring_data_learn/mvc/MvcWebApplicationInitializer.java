@@ -15,16 +15,15 @@ public class MvcWebApplicationInitializer implements WebApplicationInitializer {
 
 		AnnotationConfigWebApplicationContext ac = new AnnotationConfigWebApplicationContext();
 		
+		ac.register(MvcConfig.class);
 		ac.setServletContext(sc);
-		ac.scan("org.kxrtik.spring.spring_data_learn.services", "org.kxrtik.spring.spring_data_learn.controllers", "org.kxrtik.spring.spring_data_learn.configurations");
 		
 		DispatcherServlet dispatcherServlet = new DispatcherServlet(ac);
-		dispatcherServlet.setContextConfigLocation(MvcConfig.class.getName());
 		
 		Dynamic servlet = sc.addServlet("spring", dispatcherServlet);
 		servlet.addMapping("/");
 		servlet.setLoadOnStartup(1);
 		
-		System.out.println(MvcConfig.class.getName());
+		System.out.println(MvcWebApplicationInitializer.class.getName());
 	}
 }

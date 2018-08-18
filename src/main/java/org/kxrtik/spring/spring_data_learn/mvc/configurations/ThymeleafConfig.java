@@ -4,7 +4,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
-import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 
 @Configuration
 public class ThymeleafConfig {
@@ -13,11 +12,11 @@ public class ThymeleafConfig {
 		SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
 		templateResolver.setSuffix(".html");
 		templateResolver.setTemplateMode("HTML5");
-		return null;
+		return templateResolver;
 	}
 	
 	@Bean
-	public SpringTemplateEngine springTemplateEngine(ServletContextTemplateResolver templateResolver) {
+	public SpringTemplateEngine springTemplateEngine(SpringResourceTemplateResolver templateResolver) {
 		SpringTemplateEngine springTemplateEngine = new SpringTemplateEngine();
 		springTemplateEngine.setTemplateResolver(templateResolver);
 		return springTemplateEngine;

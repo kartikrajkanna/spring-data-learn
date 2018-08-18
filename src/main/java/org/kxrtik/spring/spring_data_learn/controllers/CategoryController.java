@@ -11,10 +11,10 @@ public class CategoryController {
 	@Autowired
 	JpaCategoryService jpaCategoryService;
 	
-	@RequestMapping("/")
+	@RequestMapping("/home")
 	public String handleHome() {
 		System.out.println("WelcomePage");
-		return "home";
+		return "home.html";
 	}
 	
 	@RequestMapping("/create")
