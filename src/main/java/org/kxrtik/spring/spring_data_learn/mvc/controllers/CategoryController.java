@@ -1,4 +1,4 @@
-package org.kxrtik.spring.spring_data_learn.controllers;
+package org.kxrtik.spring.spring_data_learn.mvc.controllers;
 
 import org.kxrtik.spring.spring_data_learn.services.JpaCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
